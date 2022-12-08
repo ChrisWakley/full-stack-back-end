@@ -16,8 +16,6 @@ public interface StatsRepository extends JpaRepository<Stats, Long> {
 
     List<Stats> getStatsByMaterial(String material);
 
-    List<Stats> getAllStatsNoLimit();
-
     @Query(value="SELECT DISTINCT id FROM stats ", nativeQuery = true)
     List<Long> getDistinctIds();
 
